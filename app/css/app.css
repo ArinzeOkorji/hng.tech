@@ -1778,5 +1778,196 @@ visibility: visible;
  }
 }
 
+/* Blog Listing Page CSS starts */
+* {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.bodyContainer {
+  margin:  auto 120px;
+}
+
+/* Blog nav starts */
+
+h1#header {
+  color: #084482;
+  font-weight: 400; 
+  font-size: 36px;
+  }
+
+.blogNavSection {
+  width: 100%;
+  margin-top: 65px;
+}
+.blogNavSectionInner {
+  background-color: #F3F4F5;
+}
+ul.blogNavList {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;    
+}
+ul.blogNavList li {
+  padding-top: 15.5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 15.5px;
+}
+ul.blogNavList li.active {
+  background-color: #fff;
+  border-top: #00AEFF solid 4px;
+}
+ul.blogNavList li.active a{
+  color: #00AEFF;
+}
+ul.blogNavList li a {
+  text-decoration: none;
+  color: #616262;
+  font-size: 24px;
+  
+}
+
+/* Blog nav ends */
+
+/* Blog body starts */
+.blogBodyContainer {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-areas: 
+  'a a a a a a a . b b b b b ';
+  grid-column-gap: 20px;
+  margin-top: 50px;
+
+  
+}
+
+
+.blogArticlesList {
+  grid-area: a;
+}
+.blogArticle {
+  height: 220px;
+  display: flex;
+  margin-bottom: 20px;
+}
+.articleInfo span, .articleSummary {
+  color: #929191;
+}
+.blogArticle .imageContainer img, .blogArticle .imageContainer {
+  height: 100%;
+  width: 216px;
+}
+.imageContainer {
+  border-right: solid #00AFFF 5px;
+}
+.articleDetails {
+  margin-left: 20px;
+}
+.articleCategory {
+  font-weight: 16px;
+  color: #00AFFF;
+}
+.articleTitle {
+  color: #000;
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 9px;
+  margin-bottom: 7px;
+}
+.articleSummary {
+  margin-bottom: 11px;
+  line-height: 180%;
+}
+.articleInfo {
+  display: flex;
+  align-items: center;
+}
+.articleInfo img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+span.articleAuthorName a {
+  text-decoration: none;
+  color: #00AFFF;
+}
+
+/* Blog body ends */
+
+/* Top posts section starts */
+.topPosts {
+  grid-area: b;
+}
+.topPostsHeader {
+  text-align: center;
+  font-size: 28px;
+}
+.topPostsBody {
+  margin-top: 21px;
+  border: solid 1px #E5E5E5;
+}
+.topPostsArticle {
+  display: flex;
+  padding: 27px 12px;
+  border: #E5E5E5 solid 1px;
+}
+.topPostsArticle img {
+  height: 59px;
+  width: 59px;
+  border-radius: 50%;
+}
+.topPostInfo {
+  padding-left: 22px;
+}
+.topPostsArticle h5 {
+  font-size: 24px;
+}
+.moreBlogInfo {
+  display: flex;
+  margin-top: 10px;
+  color: #929191;
+}
+.moreBlogInfo span:nth-child(2) {
+  margin-left: auto;
+}
+/* Top posts section ends */
+
+@media screen and (max-width: 1024px) {
+  .blogBodyContainer {
+      grid-template-areas: unset;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+  }
+
+  .bodyContainer {
+      width: 700px;
+  }
+
+  .topPosts, .blogArticlesList {
+      grid-area: unset;
+  }
+
+  .topPosts {
+      margin-bottom: 40px;
+  }
+  .topPostsArticle {
+      justify-content: center;
+  }
+  .blogArticle {
+      height: 190px;
+  }
+  .blogNavSection {
+      overflow-x: scroll;
+  }
+  .blogNavSectionInner {
+      width: 180%;
+  }
+}
+
+/* Blog Listing Page CSS ends */
+
 
 
